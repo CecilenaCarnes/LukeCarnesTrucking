@@ -67,3 +67,10 @@ C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCT
 C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\obj\Debug\net6.0\ref\LCTLoadTracker.dll
 C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\obj\Debug\net6.0\LCTLoadTracker.pdb
 C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\obj\Debug\net6.0\LCTLoadTracker.genruntimeconfig.cache
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\Microsoft.Graph.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\Microsoft.Graph.Core.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\cecil\OneDrive\Documents\Projects\LukeCarnesTrucking\LCTLoadTracker\LCTLoadTracker\bin\Debug\net6.0\System.Text.Json.dll

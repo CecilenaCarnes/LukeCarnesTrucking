@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using LCTLoadTracker.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LCTLoadTracker.Data
@@ -9,5 +10,7 @@ namespace LCTLoadTracker.Data
             : base(options)
         {
         }
+
+        public DbSet<Person> Persons { get; set; }
     }
 }
