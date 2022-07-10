@@ -17,12 +17,12 @@ namespace LCTLoadTracker.Models
         public string? CellPhone { get; set; }
         public string? HomePhone { get; set; }
         public string? AddressStreet { get; set; }
-        public int? AddressCity { get; set; }
+        public string? AddressCity { get; set; }
         public string? AddressState { get; set; }
         public int? AddressZip { get; set; }
 
         public DateTime? BirthDate { get; set; } 
-        public int? SSN { get; set; }
+        public string? SSN { get; set; }
 
     }
 

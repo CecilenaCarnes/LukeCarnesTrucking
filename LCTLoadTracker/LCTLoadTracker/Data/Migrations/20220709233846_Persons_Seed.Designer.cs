@@ -4,6 +4,7 @@ using LCTLoadTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCTLoadTracker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220709233846_Persons_Seed")]
+    partial class Persons_Seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,8 +62,8 @@ namespace LCTLoadTracker.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SSN")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("SSN")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -70,7 +72,7 @@ namespace LCTLoadTracker.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4cf1d764-dadd-498a-b9b3-efe572258e85"),
+                            Id = new Guid("aa1ba371-2cce-4c48-a1bb-6ba90910ddb5"),
                             AddressCity = "London",
                             AddressState = "KY",
                             AddressStreet = "1236 Hawk Creek Rd",
@@ -80,11 +82,11 @@ namespace LCTLoadTracker.Data.Migrations
                             Email = "jdavidson1110@gmail.com",
                             FirstName = "John",
                             LastName = "Davidson",
-                            SSN = "785-78-4521"
+                            SSN = -3814
                         },
                         new
                         {
-                            Id = new Guid("ce7cac1b-a782-49d5-a8f8-ad434a6dc3c6"),
+                            Id = new Guid("35a31a39-6262-4cc6-b882-e0a4ee0a5e15"),
                             AddressCity = "Beattyville",
                             AddressState = "KY",
                             AddressStreet = "214 Baker Bar Subdvs",
@@ -94,7 +96,7 @@ namespace LCTLoadTracker.Data.Migrations
                             Email = "Bulldog389pete1983@yahoo.com",
                             FirstName = "Matt",
                             LastName = "Green",
-                            SSN = "452-45-7845"
+                            SSN = -7438
                         });
                 });
 
