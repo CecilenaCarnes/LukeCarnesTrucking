@@ -4,6 +4,7 @@ using LCTLoadTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCTLoadTracker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220711232859_loads10")]
+    partial class loads10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -134,36 +136,6 @@ namespace LCTLoadTracker.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Persons");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("9d844f8b-3d82-434c-8f89-3680ad85f623"),
-                            AddressCity = "London",
-                            AddressState = "KY",
-                            AddressStreet = "1236 Hawk Creek Rd",
-                            AddressZip = 40741,
-                            BirthDate = new DateTime(1963, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CellPhone = "606.514.7884",
-                            Email = "jdavidson1110@gmail.com",
-                            FirstName = "John",
-                            LastName = "Davidson",
-                            SSN = "785-78-4521"
-                        },
-                        new
-                        {
-                            Id = new Guid("4a2bc86f-a17c-44ce-9493-03d3765f6700"),
-                            AddressCity = "Beattyville",
-                            AddressState = "KY",
-                            AddressStreet = "214 Baker Bar Subdvs",
-                            AddressZip = 41311,
-                            BirthDate = new DateTime(1983, 12, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CellPhone = "859.408.3753",
-                            Email = "Bulldog389pete1983@yahoo.com",
-                            FirstName = "Matt",
-                            LastName = "Green",
-                            SSN = "452-45-7845"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

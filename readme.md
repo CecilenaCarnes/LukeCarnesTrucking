@@ -23,6 +23,7 @@ Project Requirements:
                     Employee - inherit from Person
                     Applicant - inherit from Person
                 - LIST - Person table - returning Person Data.
+                - LIST - Product list in Load Class.
                 - Read Data from external file.  Reading data from SQL Database.  He also
                     mentioned before that EF would fall here.
          NOT DONE - Use LINQ - Person Controller is using a LINQ query to return Person 

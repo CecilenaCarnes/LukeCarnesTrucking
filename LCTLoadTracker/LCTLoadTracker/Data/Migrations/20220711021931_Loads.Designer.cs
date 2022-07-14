@@ -4,6 +4,7 @@ using LCTLoadTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCTLoadTracker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220711021931_Loads")]
+    partial class Loads
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,74 +23,6 @@ namespace LCTLoadTracker.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("LCTLoadTracker.Models.Load", b =>
-                {
-                    b.Property<Guid>("LoadID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int?>("BOL")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CustomerUnloaded")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Driver")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Gallons1")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Gallons2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("LoadCount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Product1")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product2")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product3")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product4")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product5")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Pump")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Split")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TerminalLoaded")
-                        .HasColumnType("int");
-
-                    b.HasKey("LoadID");
-
-                    b.ToTable("Loads");
-                });
 
             modelBuilder.Entity("LCTLoadTracker.Models.Person", b =>
                 {
@@ -114,6 +48,10 @@ namespace LCTLoadTracker.Data.Migrations
                     b.Property<string>("CellPhone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
@@ -135,10 +73,12 @@ namespace LCTLoadTracker.Data.Migrations
 
                     b.ToTable("Persons");
 
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Person");
+
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9d844f8b-3d82-434c-8f89-3680ad85f623"),
+                            Id = new Guid("26bbf3b3-4998-4ebe-992f-f55522a52096"),
                             AddressCity = "London",
                             AddressState = "KY",
                             AddressStreet = "1236 Hawk Creek Rd",
@@ -152,7 +92,7 @@ namespace LCTLoadTracker.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a2bc86f-a17c-44ce-9493-03d3765f6700"),
+                            Id = new Guid("44c57507-5fae-4ceb-b366-6bcd052bfbd5"),
                             AddressCity = "Beattyville",
                             AddressState = "KY",
                             AddressStreet = "214 Baker Bar Subdvs",
@@ -366,6 +306,73 @@ namespace LCTLoadTracker.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("LCTLoadTracker.Models.Load", b =>
+                {
+                    b.HasBaseType("LCTLoadTracker.Models.Person");
+
+                    b.Property<int?>("BOL")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CustomerUnloaded")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Driver")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Gallons1")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Gallons2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gallons3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gallons4")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gallons5")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("LoadCount")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("LoadID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Product1")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Product2")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Product3")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Product4")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Product5")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Pump")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Split")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TerminalLoaded")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Load");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -4,6 +4,7 @@ using LCTLoadTracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LCTLoadTracker.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220711024804_persons5")]
+    partial class persons5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,74 +23,6 @@ namespace LCTLoadTracker.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("LCTLoadTracker.Models.Load", b =>
-                {
-                    b.Property<Guid>("LoadID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int?>("BOL")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Comment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("CustomerUnloaded")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Driver")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Gallons1")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Gallons2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons4")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Gallons5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("LoadCount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Product1")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product2")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product3")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product4")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Product5")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Pump")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Split")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("TerminalLoaded")
-                        .HasColumnType("int");
-
-                    b.HasKey("LoadID");
-
-                    b.ToTable("Loads");
-                });
 
             modelBuilder.Entity("LCTLoadTracker.Models.Person", b =>
                 {
@@ -138,7 +72,7 @@ namespace LCTLoadTracker.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9d844f8b-3d82-434c-8f89-3680ad85f623"),
+                            Id = new Guid("e7dab758-4fd0-411f-9735-2e8786350987"),
                             AddressCity = "London",
                             AddressState = "KY",
                             AddressStreet = "1236 Hawk Creek Rd",
@@ -152,7 +86,7 @@ namespace LCTLoadTracker.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4a2bc86f-a17c-44ce-9493-03d3765f6700"),
+                            Id = new Guid("70122b5d-9bc0-4cbf-9a4c-84b22bd84b41"),
                             AddressCity = "Beattyville",
                             AddressState = "KY",
                             AddressStreet = "214 Baker Bar Subdvs",
