@@ -1,0 +1,132 @@
+﻿@model LCTLoadTracker.Models.Load
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Load</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Driver)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Driver)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LoadCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LoadCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BOL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BOL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TerminalLoaded)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TerminalLoaded)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomerUnloaded)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CustomerUnloaded)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallons1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallons1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallons2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallons2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallons3)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallons3)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallons4)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallons4)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Product5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Product5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gallons5)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gallons5)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Split)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Split)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pump)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pump)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LoadID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

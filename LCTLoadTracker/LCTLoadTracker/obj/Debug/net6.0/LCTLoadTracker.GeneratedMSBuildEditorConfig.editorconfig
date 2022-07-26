@@ -23,12 +23,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Home/Loads.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2Fkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Home/Person.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJzb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Loads/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hZHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Loads/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hZHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Loads/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hZHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Loads/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hZHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Loads/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9hZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Person/Create.cshtml]
@@ -61,6 +85,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cecil/OneDrive/Documents/Projects/LukeCarnesTrucking/LCTLoadTracker/LCTLoadTracker/Views/_ViewImports.cshtml]

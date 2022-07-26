@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LCTLoadTracker.Data
-{ 
-public class ApplicationDbContext : IdentityDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
+    public class ApplicationDbContext : IdentityDbContext
     {
-    }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<Load> Loads { get; set; }  //How do I make this its own table.
@@ -66,12 +66,30 @@ public class ApplicationDbContext : IdentityDbContext
                           BirthDate = DateTime.Parse("1983/12/12"),
                           SSN = "452-45-7845"
                       });
+
+
+
+            modelBuilder.Entity<Load>().HasData(new Load
+            {
+                LoadID = Guid.NewGuid(),
+                Driver = DriverList.Matt,
+                Date = DateTime.Parse("2022-7-10"),
+                LoadCount = 1,
+                BOL = 895424,
+                TerminalLoaded = TerminalList.KnoxvilleShell,
+                CustomerUnloaded = CustomerList.DocsColumbia,
+                Product1 = ProductList.Gas,
+                Gallons1 = 8900,
+                Split = "No",
+                Pump = "No"
+            });
+
             base.OnModelCreating(modelBuilder);
         }
 
-
+  
    
-
+        
 
 }
 

@@ -1,0 +1,124 @@
+﻿@model LCTLoadTracker.Models.Load
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Load</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="LoadID" />
+            <div class="form-group">
+                <label asp-for="Driver" class="control-label"></label>
+                <select asp-for="Driver" asp-items="Html.GetEnumSelectList<DriverList>()"> </select>
+                <span asp-validation-for="Driver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoadCount" class="control-label"></label>
+                <input asp-for="LoadCount" class="form-control" />
+                <span asp-validation-for="LoadCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BOL" class="control-label"></label>
+                <input asp-for="BOL" class="form-control" />
+                <span asp-validation-for="BOL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TerminalLoaded" class="control-label"></label>
+                <select asp-for="TerminalLoaded" asp-items="Html.GetEnumSelectList<TerminalList>()"> </select>
+                <span asp-validation-for="TerminalLoaded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerUnloaded" class="control-label"></label>
+                <select asp-for="CustomerUnloaded" asp-items="Html.GetEnumSelectList<CustomerList>()"> </select>
+                <span asp-validation-for="CustomerUnloaded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product1" class="control-label"></label>
+                <select asp-for="Product1" asp-items="Html.GetEnumSelectList<ProductList>()"> </select>
+                <span asp-validation-for="Product1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gallons1" class="control-label"></label>
+                <input asp-for="Gallons1" class="form-control" />
+                <span asp-validation-for="Gallons1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product2" class="control-label"></label>
+                <select asp-for="Product2" asp-items="Html.GetEnumSelectList<ProductList>()"> </select>
+                <span asp-validation-for="Product2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gallons2" class="control-label"></label>
+                <input asp-for="Gallons2" class="form-control" />
+                <span asp-validation-for="Gallons2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product3" class="control-label"></label>
+                <select asp-for="Product3" asp-items="Html.GetEnumSelectList<ProductList>()"> </select>
+                <span asp-validation-for="Product3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gallons3" class="control-label"></label>
+                <input asp-for="Gallons3" class="form-control" />
+                <span asp-validation-for="Gallons3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product4" class="control-label"></label>
+                <select asp-for="Product4" asp-items="Html.GetEnumSelectList<ProductList>()"> </select>
+                <span asp-validation-for="Product4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gallons4" class="control-label"></label>
+                <input asp-for="Gallons4" class="form-control" />
+                <span asp-validation-for="Gallons4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product5" class="control-label"></label>
+                <select asp-for="Product5" asp-items="Html.GetEnumSelectList<ProductList>()"> </select>
+                <span asp-validation-for="Product5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gallons5" class="control-label"></label>
+                <input asp-for="Gallons5" class="form-control" />
+                <span asp-validation-for="Gallons5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Split" class="control-label"></label>
+                <input asp-for="Split" class="form-control" />
+                <span asp-validation-for="Split" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pump" class="control-label"></label>
+                <input asp-for="Pump" class="form-control" />
+                <span asp-validation-for="Pump" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

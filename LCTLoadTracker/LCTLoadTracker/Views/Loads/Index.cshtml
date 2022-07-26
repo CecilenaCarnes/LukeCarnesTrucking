@@ -1,0 +1,143 @@
+﻿@model IEnumerable<LCTLoadTracker.Models.Load>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Driver)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BOL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TerminalLoaded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerUnloaded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gallons1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gallons2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gallons3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gallons4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gallons5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Split)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pump)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Driver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoadCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BOL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TerminalLoaded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerUnloaded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gallons1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gallons2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gallons3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gallons4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gallons5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Split)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pump)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LoadID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.LoadID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.LoadID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
