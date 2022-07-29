@@ -27,6 +27,7 @@ namespace LCTLoadTracker.Controllers
                           Problem("Entity set 'ApplicationDbContext.Loads'  is null.");
         }
 
+
         // GET: Loads/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
@@ -67,6 +68,8 @@ namespace LCTLoadTracker.Controllers
             }
             return View(load);
         }
+
+       
 
         // GET: Loads/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
@@ -160,5 +163,6 @@ namespace LCTLoadTracker.Controllers
         {
           return (_context.Loads?.Any(e => e.LoadID == id)).GetValueOrDefault();
         }
+
     }
 }

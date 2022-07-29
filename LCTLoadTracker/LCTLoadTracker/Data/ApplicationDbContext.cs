@@ -15,24 +15,6 @@ namespace LCTLoadTracker.Data
         public DbSet<Load> Loads { get; set; }  //How do I make this its own table.
 
 
-        //using SamuraiApp.Domain;
-
-        //    public class SamuraiContext : DbContext
-        //{
-        // public DbSet<Samurai> Samurais { get; set; }
-        // public DbSet<Quote> Quotes { get; set; }
-
-        //this worked protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //this worked    optionsBuilder.UseSqlServer(
-        //this worked         "Data Source= (localdb)\\mssqllocaldb; Initial Catalog=aspnet-LCTLoadTracker-3525F435-0D41-4FC5-A863-B98D89B39220;"); 
-        //(localdb)\\MSSQLLocalDB; Initial Catalog=SamuraiAppData");
-        //"Server=(localdb)\\mssqllocaldb;Database=aspnet-LCTLoadTracker-3525F435-0D41-4FC5-A863-B98D89B39220;Trusted_Connection=True;MultipleActiveResultSets=true"
-
-        //  }
-        // }
-        //}
-
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

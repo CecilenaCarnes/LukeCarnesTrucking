@@ -1,4 +1,6 @@
-LCTLoadTracker is an app to assist me eventually with tracking applicants, employees, owners, customers, loads, mileage and payroll.
+LCTLoadTracker is an app for tracking applicants, employees, owners, customers, loads, mileage and payroll.  Currently only person and load entry exist.
+
+This is an MVC app built from EF and a SQL database.  I have supplied seed data for person and load. You will need to do update-database to create the database.
 
 
 
@@ -13,8 +15,10 @@ Project Requirements:
 
 
     - 3 Functions or Methods
-        - Within in the controller when the Person tab is accessed and the Person data is 
-            returned in the list the Index function is returned using _context to return the list of Person.  Values returned include the Person data.
+        - Person Controller - PersonExists
+        - Person Controller - Index
+        - Loads Controller - LoadExists
+        - Loads Controller - Index
     
 
     Choose 3 or more from Features List
@@ -29,5 +33,5 @@ Project Requirements:
             4- Use LINQ - Person Controller is using a LINQ query to return Person 
                     list. Load Controller is using a LINQ query to return Loads.
             5 - Entity Framework - Create and Write to SQL Db - Ernesto Approved Feature 
-            Provided Structure and Seed data for Person and Loads.
+                Provided Structure and Seed data for Person and Loads.
 

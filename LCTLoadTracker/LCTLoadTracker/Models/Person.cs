@@ -24,9 +24,9 @@ namespace LCTLoadTracker.Models
         public DateTime? BirthDate { get; set; } 
         public string? SSN { get; set; }
 
-        internal class FirstName
-        {
-        }
+        //internal class FirstName
+        //{
+        //}
     }
 
 

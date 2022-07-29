@@ -10,6 +10,9 @@ using LCTLoadTracker.Models;
 
 namespace LCTLoadTracker.Controllers
 {
+   
+    
+
     public class PersonController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -160,5 +163,7 @@ namespace LCTLoadTracker.Controllers
         {
           return (_context.Persons?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        
     }
 }
